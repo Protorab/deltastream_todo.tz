@@ -1,4 +1,5 @@
 /** @format */
+@import "config";
 
 body {
   margin: 0;
@@ -22,6 +23,7 @@ body {
 label {
   cursor: pointer;
 }
+
 input {
   border: none;
 
@@ -40,8 +42,11 @@ input {
   position: relative;
   flex-direction: column;
   width: 100%;
+  padding-top: 35px;
 }
-
+.main__title {
+  margin-bottom: 35px;
+}
 .wrapper {
   width: 50%;
   display: flex;
@@ -49,35 +54,58 @@ input {
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  @media only screen and (max-width: 900px) and (orientation: landscape) {
+    width: 95%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+  }
 }
 .todo__form {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 35px;
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+    flex-direction: column;
+  }
 }
 .todo__input {
+  @extend .p;
   display: flex;
+  width: 100%;
+  max-width: 170px;
+
   padding: 0.3rem 0.5rem;
-  border: 1px solid transparent;
-  // &:focus,
-  // &:active {
-  //   border: none;
-  // }
+  border-radius: 4px;
+  height: 30px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 1rem;
+    max-width: 100%;
+  }
 }
 .todo__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35px;
+  height: 30px;
   max-width: 170px;
   width: 100%;
   border-radius: 4px;
   transition: all 0.5s ease-in-out;
   background: #43657c;
-
-  cursor: pointer;
+  &:hover {
+    background: #3485bb;
+  }
+  @media only screen and (max-width: 600px) {
+    max-width: 100%;
+  }
 }
 .todo__list {
   list-style: none;
@@ -99,6 +127,8 @@ input {
 }
 
 .todo__remove {
+  width: 30px;
+  height: 30px;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   color: rgb(190, 190, 190);
