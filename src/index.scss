@@ -1,0 +1,121 @@
+/** @format */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  outline: none;
+}
+body {
+  background: #143d59;
+}
+label {
+  cursor: pointer;
+}
+input {
+  border: none;
+
+  &[type="submit"] {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+    z-index: -10;
+  }
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.todo__form {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+.todo__input {
+  display: flex;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid transparent;
+  // &:focus,
+  // &:active {
+  //   border: none;
+  // }
+}
+.todo__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  max-width: 170px;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  background: #43657c;
+
+  cursor: pointer;
+}
+.todo__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.todo__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.todo__check {
+  margin-right: 0.5rem;
+}
+
+.todo__remove {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: rgb(190, 190, 190);
+  font-size: 14px;
+  border: 1px solid rgb(190, 190, 190);
+  background: #43657c;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  &:hover {
+    background: #3485bb;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
