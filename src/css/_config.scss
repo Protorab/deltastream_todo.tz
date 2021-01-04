@@ -1,13 +1,13 @@
 /** @format */
 
 // USER VARIABLES SECTION
-$accent: #3485bb; // Accent Color
+$accent: #43657c; // Accent Color
 $accentHover: #45aaed; // Accent hover Color
-$mainColor: #43657c; // Body Background Color
+$mainColor: #143d59; // Body Background Color
 $fontsize: 10px; // Body Font Size
 $textcolor: #ffffff; // Text Color
 $lineheight: 1.65; // Document Line Height
-$userfont: Montserrat, sans-serif; // User Font Family
+$userfont: sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $maxWidth: 1920;
 $maxWidthContainer: 940;
@@ -90,6 +90,7 @@ $maxWidthContainer: 940;
 }
 
 // IMPORT SECTION
+@import "vendor/loader";
 @import "vendor/normalize";
 
 // Bootstrap Reboot collection
@@ -327,15 +328,23 @@ html {
   }
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 @-ms-viewport {
   width: device-width;
 }
 
 body {
-  // font-family: $userfont;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: $fontsize;
   line-height: $lineheight;
-  background: #f2f2f2;
+  background: $mainColor;
   color: $textcolor;
   min-width: 320px;
   position: relative;
